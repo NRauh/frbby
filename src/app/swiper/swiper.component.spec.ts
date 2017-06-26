@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SwiperComponent } from './swiper.component';
 
-describe('SwiperComponent', () => {
+fdescribe('SwiperComponent', () => {
   let component: SwiperComponent;
   let fixture: ComponentFixture<SwiperComponent>;
 
