@@ -1,16 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SwiperComponent } from './swiper/swiper.component';
+import { CardComponent } from './swiper/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SwiperComponent
+    SwiperComponent,
+    CardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
