@@ -1,3 +1,15 @@
+app-card {
+    position: absolute;
+}
+
+app-card:last-of-type {
+    position: relative;
+}
+
+app-card:first-of-type {
+    z-index: 100;
+}
+
 .button-controls {
     margin-top: 2em;
 }
