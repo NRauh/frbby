@@ -1,0 +1,19 @@
+nav {
+    margin-bottom: 1.5rem;
+    height: 4rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f3f3f3;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.nav-item {
+    font-size: 3rem;
+    color: #909090;
+}
+
+.nav-item.active {
+    color: #f36f82;
+}

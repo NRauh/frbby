@@ -5,12 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SwiperComponent } from './swiper/swiper.component';
 import { CardComponent } from './swiper/card/card.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SwiperComponent,
-    CardComponent
+    CardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
