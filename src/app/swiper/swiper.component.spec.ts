@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwiperComponent } from './swiper.component';
 import { CardComponent } from './card/card.component';
 
-fdescribe('SwiperComponent', () => {
+describe('SwiperComponent', () => {
   let component: SwiperComponent;
   let fixture: ComponentFixture<SwiperComponent>;
 

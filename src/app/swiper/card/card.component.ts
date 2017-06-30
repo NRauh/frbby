@@ -24,7 +24,11 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
-  choiceDone() {
-    this.finished.emit(true);
+  choiceDone(event) {
+    // This callback is ran when the component is first rendered
+    // Checking time was spent changing state prevents wrongly assuming it actually ran
+    if (event.totalTime) {
+      this.finished.emit(true);
+    }
   }
 }

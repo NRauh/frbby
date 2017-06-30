@@ -25,10 +25,18 @@ describe('CardComponent', () => {
   });
 
   describe('choiceDone', () => {
-    it('should emit finished as true', () => {
+    beforeEach(() => {
       spyOn(component.finished, 'emit');
-      component.choiceDone();
+    });
+
+    it('should emit finished as true when the event has a time', () => {
+      component.choiceDone({totalTime: 500});
       expect(component.finished.emit).toHaveBeenCalledWith(true);
+    });
+
+    it('should not emit anything when the event does not have a toatalTime', () => {
+      component.choiceDone({totalTime: 0});
+      expect(component.finished.emit).not.toHaveBeenCalled();
     });
   });
 });
