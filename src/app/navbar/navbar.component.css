@@ -14,6 +14,10 @@ nav {
     color: #909090;
 }
 
+.nav-item a {
+    color: unset;
+}
+
 .nav-item.active {
     color: #f36f82;
 }
