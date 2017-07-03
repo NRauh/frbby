@@ -15,18 +15,18 @@ app-card:nth-of-type(2) {
 }
 
 .button-controls {
-    margin-top: 2em;
+    margin-top: 3vh;
 }
 
 .button-controls .control {
     display: block;
-    width: 1.5em;
-    height: 1.5em;
-    line-height: 1.5em;
+    width: 13vh;
+    height: 13vh;
     border-radius: 1.5em;
     border: 1px solid rgba(0,0,0,.125);
     text-align: center;
-    font-size: 4em;
+    line-height: 150%;
+    font-size: 8vh;
 }
 
 .button-controls .control.like {
@@ -36,37 +36,3 @@ app-card:nth-of-type(2) {
 .button-controls .control.dislike {
     color: #f26555;
 }
-
-/*
-.pets .card.liking {
-    animation: 750ms ease-in-out like;
-}
-
-.pets .card.disliking {
-    animation: 750ms ease-in-out dislike;
-}
-
-@keyframes like {
-    0% {
-        left: 0%;
-    }
-    70% {
-        left: 100%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-@keyframes dislike {
-    0% {
-        right: 0%;
-    }
-    70% {
-        right: 100%;
-    }
-    100% {
-        right: 100%;
-    }
-}
-*/

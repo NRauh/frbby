@@ -1,0 +1,12 @@
+.list-group {
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+img {
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+    border-radius: 15vw;
+    margin-right: 3vw;
+}

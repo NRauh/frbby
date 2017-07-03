@@ -1,5 +1,6 @@
 <div class="list-group">
   <div class="list-group-item" *ngFor="let pet of matchService.matchedPets">
+    <img src="{{pet.imageUrl}}" alt="{{pet.name}}">
     <h5>{{pet.name}}</h5>
   </div>
 </div>

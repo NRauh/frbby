@@ -1,5 +1,13 @@
 .card-img-top {
-    width: 500px;
-    height: 500px;
+    width: 50vh;
+    height: 50vh;
     object-fit: cover;
+}
+
+.card-block {
+    padding: 1.5vh;
+}
+
+.card-block .card-title {
+    margin-bottom: unset;
 }
