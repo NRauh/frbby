@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatchService } from '../match-service/match.service';
 
 @Component({
   selector: 'app-messages',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MatchService) public matchService: MatchService) { }
 
   ngOnInit() {
   }

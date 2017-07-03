@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MessagesComponent } from './messages.component';
+import { MatchService } from '../match-service/match.service';
+
+class MatchServiceMock {
+}
 
 describe('MessagesComponent', () => {
   let component: MessagesComponent;
@@ -8,7 +12,10 @@ describe('MessagesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MessagesComponent ]
+      declarations: [ MessagesComponent ],
+      providers: [
+        { provide: MatchService, useClass: MatchServiceMock }
+      ]
     })
     .compileComponents();
   }));

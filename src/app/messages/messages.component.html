@@ -1,13 +1,5 @@
 <div class="list-group">
-  <div class="list-group-item">
-    <h5>Name</h5>
-  </div>
-
-  <div class="list-group-item">
-    <h5>Name</h5>
-  </div>
-
-  <div class="list-group-item">
-    <h5>Name</h5>
+  <div class="list-group-item" *ngFor="let pet of matchService.matchedPets">
+    <h5>{{pet.name}}</h5>
   </div>
 </div>
