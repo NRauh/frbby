@@ -17,6 +17,7 @@ import { animate, state, style, transition, trigger} from '@angular/animations';
 export class CardComponent implements OnInit {
   @Input() choice: string;
   @Input() image: string;
+  @Input() name: string;
   @Output() finished = new EventEmitter<boolean>();
 
   constructor() { }

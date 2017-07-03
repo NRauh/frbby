@@ -10,6 +10,10 @@ app-card:first-of-type {
     z-index: 100;
 }
 
+app-card:nth-of-type(2) {
+    z-index: 90;
+}
+
 .button-controls {
     margin-top: 2em;
 }

@@ -1,7 +1,9 @@
 <div class="row justify-content-center">
   <app-card
-    *ngFor="let pet of pets"
+    *ngFor="let pet of matchService.petQueue"
     [choice]="pet.selection"
+    [image]="pet.imageUrl"
+    [name]="pet.name"
     (finished)="onFinished()">
   </app-card>
 </div>

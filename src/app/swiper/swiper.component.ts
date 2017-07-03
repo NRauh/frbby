@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatchService } from '../match-service/match.service';
 
 @Component({
   selector: 'app-swiper',
@@ -6,30 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./swiper.component.css']
 })
 export class SwiperComponent implements OnInit {
-  pets = [{
-    url: 's',
-    name: 'bob',
-    selection: ''
-  }, {
-    url: 'c',
-    name: 'ken',
-    selection: ''
-  }];
-
-  constructor() { }
+  constructor(@Inject(MatchService) public matchService: MatchService) { }
 
   ngOnInit() {
+    this.matchService.loadQueue();
   }
 
   like() {
-    this.pets[0].selection = 'liked'
+    this.matchService.petQueue[0].selection = 'liked';
   }
 
   dislike() {
-    this.pets[0].selection = 'disliked'
+    this.matchService.petQueue[0].selection = 'disliked';
   }
 
   onFinished() {
-    this.pets.shift();
+    this.matchService.petQueue.shift();
+    this.matchService.getPet().then((pet) => {
+      this.matchService.petQueue.push(pet);
+    });
   }
 }

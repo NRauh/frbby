@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SwiperComponent } from './swiper/swiper.component';
 import { CardComponent } from './swiper/card/card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MessagesComponent } from './messages/messages.component';
+import { MatchService } from './match-service/match.service';
 
 let appRoutes: Routes = [
   { path: '', component: SwiperComponent },
@@ -25,9 +27,10 @@ let appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpModule
   ],
-  providers: [],
+  providers: [MatchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
