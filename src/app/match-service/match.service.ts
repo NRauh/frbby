@@ -7,6 +7,7 @@ import * as PetNames from 'pet-names';
 export class MatchService {
   petQueue = Array<Pet>();
   petNames = PetNames;
+  matchedPets = Array<Pet>();
 
   constructor(public http: Http) { }
 
@@ -38,5 +39,13 @@ export class MatchService {
         return reject(error);
       });
     });
+  }
+
+  matchStatus(potentialPet: Pet) {
+    let matched = Math.random() >= 0.5;
+
+    if (matched) {
+      this.matchedPets.push(potentialPet);
+    }
   }
 }

@@ -15,6 +15,7 @@ export class SwiperComponent implements OnInit {
 
   like() {
     this.matchService.petQueue[0].selection = 'liked';
+    this.matchService.matchStatus(this.matchService.petQueue[0]);
   }
 
   dislike() {

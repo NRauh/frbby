@@ -29,9 +29,10 @@ class MatchServiceMock {
     };
     return resolve(newPet);
   }));
+  matchStatus = jasmine.createSpy('matchStatus');
 }
 
-fdescribe('SwiperComponent', () => {
+describe('SwiperComponent', () => {
   let component: SwiperComponent;
   let fixture: ComponentFixture<SwiperComponent>;
 
@@ -70,6 +71,11 @@ fdescribe('SwiperComponent', () => {
       component.matchService.petQueue[0].selection = undefined;
       component.like();
       expect(component.matchService.petQueue[0].selection).toBe('liked');
+    });
+
+    it('should check to see if the pet matches with the person', () => {
+      component.like();
+      expect(component.matchService.matchStatus).toHaveBeenCalledWith(component.matchService.petQueue[0]);
     });
   });
 

@@ -71,4 +71,34 @@ describe('MatchService', () => {
       });
     }));
   });
+
+  describe('matchStatus', () => {
+    beforeEach(inject([MatchService], (service: MatchService) => {
+      service.matchedPets = Array<Pet>();
+    }));
+
+    it('should add matched pets to matchedPets', inject([MatchService], (service: MatchService) => {
+      let potentialPet: Pet = {
+        name: 'Diane',
+        imageUrl: 'http://example.com/image.jpg',
+        selection: ''
+      };
+      spyOn(Math, 'random').and.returnValue(0.5);
+
+      service.matchStatus(potentialPet);
+      expect(service.matchedPets[0]).toEqual(potentialPet);
+    }));
+
+    it('should not add unmatched pets to matchedPets', inject([MatchService], (service: MatchService) => {
+      let potentialPet: Pet = {
+        name: 'Diane',
+        imageUrl: 'http://example.com/image.jpg',
+        selection: ''
+      };
+      spyOn(Math, 'random').and.returnValue(0.4);
+
+      service.matchStatus(potentialPet);
+      expect(service.matchedPets.length).toBe(0);
+    }));
+  });
 });
