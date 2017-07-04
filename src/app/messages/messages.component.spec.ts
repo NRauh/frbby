@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
 
 import { MessagesComponent } from './messages.component';
 import { MatchService } from '../match-service/match.service';
@@ -15,7 +16,8 @@ describe('MessagesComponent', () => {
       declarations: [ MessagesComponent ],
       providers: [
         { provide: MatchService, useClass: MatchServiceMock }
-      ]
+      ],
+      imports: [RouterModule]
     })
     .compileComponents();
   }));
