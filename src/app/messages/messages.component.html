@@ -1,5 +1,5 @@
 <div class="list-group">
-  <div class="list-group-item" *ngFor="let pet of matchService.matchedPets">
+  <div class="list-group-item" routerLink="/messages/{{i}}" *ngFor="let pet of matchService.matchedPets; let i = index;">
     <img src="{{pet.imageUrl}}" alt="{{pet.name}}">
     <h5>{{pet.name}}</h5>
   </div>

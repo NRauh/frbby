@@ -10,10 +10,12 @@ import { CardComponent } from './swiper/card/card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MatchService } from './match-service/match.service';
+import { MessageComponent } from './messages/message/message.component';
 
 let appRoutes: Routes = [
   { path: '', component: SwiperComponent },
-  { path: 'messages', component: MessagesComponent }
+  { path: 'messages', component: MessagesComponent },
+  { path: 'messages/:id', component: MessageComponent }
 ];
 
 @NgModule({
@@ -22,7 +24,8 @@ let appRoutes: Routes = [
     SwiperComponent,
     CardComponent,
     NavbarComponent,
-    MessagesComponent
+    MessagesComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
