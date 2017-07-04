@@ -1,28 +1,29 @@
 # Frbby
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+Find a furbaby and learn Angular.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm install`.
 
-## Code scaffolding
+Once that's done you can use `npm start` to run the dev server (http://localhost:4200).
+The app will reload on saves.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Use `npm run ng -- ${command}` to use angular-cli commands without having to install it globally.
+[Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md). 
 
-## Build
+There are some tests if you want to see how those can look out of the box.
+Run them with `npm test`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Dojo Ideas
 
-## Running unit tests
+The goal of the dojo is to get a feel for Angular.
+You should try to do this by taking this app, and attempting to add something more to it.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You can do whatever you want, but here's some ideas to help you get going.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Make swiping on a card like or dislike a pet (hint: look up HammerJS and Angular)
+* Add a transition between the routes (either with css or Angular animations)
+* Make matches persist if the app closes
+* Add dogs to the potential matches
+* Send an alert on a match
