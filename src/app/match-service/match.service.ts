@@ -27,7 +27,7 @@ export class MatchService {
     return new Promise((resolve, reject) => {
       this.http.get('http://thecatapi.com/api/images/get?format=xml&type=jpg,png').subscribe((res: Response) => {
         let parser = new DOMParser();
-        let catRes = parser.parseFromString(res.text(), "text/xml");
+        let catRes = parser.parseFromString(res.text(), 'text/xml');
         let newPet = {
           name: this.petNames.random(),
           imageUrl: catRes.getElementsByTagName('url')[0].textContent,

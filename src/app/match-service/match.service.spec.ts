@@ -44,7 +44,7 @@ describe('MatchService', () => {
         '<image><url>http://example.com/image.jpg</url></image></images></data></response>';
 
       spyOn(service.http, 'get').and.returnValue(Observable.of({
-        text: () => { return expectedXml; }
+        text: () => expectedXml
       }));
 
       spyOn(service.petNames, 'random').and.returnValue('fluffy');
