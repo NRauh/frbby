@@ -23,7 +23,11 @@ You should try to do this by taking this app, and attempting to add something mo
 You can do whatever you want, but here's some ideas to help you get going.
 
 * Make swiping on a card like or dislike a pet (hint: look up HammerJS and Angular)
+* Change the navbar button colors based on route (hint: look up Angular [class])
 * Add a transition between the routes (either with css or Angular animations)
 * Make matches persist if the app closes
 * Add dogs to the potential matches
 * Send an alert on a match
+* Let the user send a message
+    - Get a meow back
+    - Get a chatbot to reply
